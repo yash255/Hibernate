@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate</property>
+		<property name="connection.username">yash</property>
+		<property name="connection.password">Yashmysql@25</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<mapping class="hibernate.Student" />
+		<mapping class="hibernate.Address" />
+		<mapping class="hibernate.OnetoOne.Question"/>
+		<mapping class="hibernate.OnetoOne.Answer"/>
+		<mapping class="hibernate.Many_to_Many.Employee" />	
+		<mapping class="hibernate.Many_to_Many.Project" />	
+		<mapping class="hibernate.Embedding.Student"/>
+		
+		<mapping class="hibernate.One_to_Many.Question1"/>
+		<mapping class="hibernate.One_to_Many.Answer1"/>
+		
+		
+	</session-factory>
+</hibernate-configuration>
